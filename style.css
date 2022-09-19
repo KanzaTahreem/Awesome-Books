@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  padding-bottom: 1em;
+  font-size: 2em;
+}
+
+section > div {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid grey;
+}
+
+input {
+  margin: 0.5em 0;
+  align-self: flex-start;
+}
