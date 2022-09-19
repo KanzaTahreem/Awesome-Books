@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/KanzaTahreem/Awesome-Books/issues"
   },
-  "homepage": "https://github.com/KanzaTahreem/Awesome-Books#readme"
+  "homepage": "https://github.com/KanzaTahreem/Awesome-Books#readme",
+  "devDependencies": {
+    "hint": "^7.1.2"
+  }
 }
