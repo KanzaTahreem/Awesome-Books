@@ -10,9 +10,10 @@ window.onload = () => {
     }
   }
 
+  let bookStorage = localStorage.getItem('bookArray')
   let bookList = [];
 
-  const removeBook = (e, newBookElement) => {
+ const removeBook = (e, newBookElement) => {
     const index = e.target.getAttribute('myIndex');
     bookList = bookList.filter((element, i) => {
       if (i === parseInt(index, 10)) {
@@ -37,10 +38,16 @@ window.onload = () => {
       const remove = newBookElement.querySelector('.remove');
       remove.addEventListener('click', (e) => {
         removeBook(e, newBookElement);
+        localStorage.setItem('bookArray', JSON.stringify(bookList));
       });
       addBook.append(newBookElement);
     });
   };
+
+  if(bookStorage){
+    bookList = JSON.parse(bookStorage)
+    showBooks()
+  }
 
   add.addEventListener('click', (e) => {
     e.preventDefault();
@@ -52,5 +59,6 @@ window.onload = () => {
     showBooks();
     document.querySelector('.title').value = '';
     document.querySelector('.author').value = '';
+    localStorage.setItem('bookArray', JSON.stringify(bookList));
   });
 };
