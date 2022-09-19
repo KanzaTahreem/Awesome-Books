@@ -24,6 +24,10 @@ section > div {
   border-bottom: 1px solid grey;
 }
 
+div p {
+  margin-bottom: 0.5em;
+}
+
 input {
   margin: 0.5em 0;
   align-self: flex-start;
