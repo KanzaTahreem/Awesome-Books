@@ -10,10 +10,10 @@ window.onload = () => {
     }
   }
 
-  let bookStorage = localStorage.getItem('bookArray')
+  const bookStorage = localStorage.getItem('bookArray');
   let bookList = [];
 
- const removeBook = (e, newBookElement) => {
+  const removeBook = (e, newBookElement) => {
     const index = e.target.getAttribute('myIndex');
     bookList = bookList.filter((element, i) => {
       if (i === parseInt(index, 10)) {
@@ -44,9 +44,9 @@ window.onload = () => {
     });
   };
 
-  if(bookStorage){
-    bookList = JSON.parse(bookStorage)
-    showBooks()
+  if (bookStorage) {
+    bookList = JSON.parse(bookStorage);
+    showBooks();
   }
 
   add.addEventListener('click', (e) => {
