@@ -50,5 +50,7 @@ window.onload = () => {
     const book = new Book(title, author);
     bookList.push(book);
     showBooks();
+    document.querySelector('.title').value = '';
+    document.querySelector('.author').value = '';
   });
 };
