@@ -13,8 +13,9 @@ window.onload = () => {
       this.bookList = [];
       this.addBook = document.querySelector('.add-book');
       this.parser = new DOMParser();
+    }
 
-      this.removeBook = (e, newBookElement) => {
+      removeBook = (e, newBookElement) => {
         const index = e.target.getAttribute('myIndex');
         this.bookList = this.bookList.filter((element, i) => {
           if (i === parseInt(index, 10)) {
@@ -25,13 +26,12 @@ window.onload = () => {
         newBookElement.remove();
       };
 
-      this.showBooks = () => {
+      showBooks = () => {
         this.addBook.innerHTML = '';
         this.bookList.forEach((e, i) => {
           const newBook = `
-          <div>
-            <p>${e.title}</p>
-            <p>${e.author}</p>
+          <div class="book-div">
+            <p>"${e.title}" by ${e.author}</p>
             <button type="button" class="remove" myIndex ="${i}" >Remove</button>
           </div>
           `;
@@ -44,7 +44,6 @@ window.onload = () => {
           this.addBook.append(newBookElement);
         });
       };
-    }
   }
 
   const library = new Library();

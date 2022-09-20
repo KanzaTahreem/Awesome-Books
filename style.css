@@ -7,10 +7,12 @@
 section {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  align-items: center;
+  padding: 3em 5em;
+  /* position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 h1 {
@@ -30,5 +32,22 @@ div p {
 
 input {
   margin: 0.5em 0;
-  align-self: flex-start;
+  /* align-self: flex-start; */
+}
+
+.book-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.book-div:last-child {
+  margin-bottom: 0;
+}
+
+.add-book {
+  width: 100%;
+  padding: 1em;
+  border: black solid 2px;
+  border-radius: 10px;
 }
