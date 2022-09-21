@@ -1,8 +1,15 @@
 /* eslint-disable max-classes-per-file */
 window.onload = () => {
-  displayDate()
   const add = document.querySelector('.add');
+  const dateEl = document.querySelector('.date');
 
+  const displayDate = () => {
+    setInterval(() => {
+      const date = new Date().toUTCString();
+      dateEl.innerHTML = date;
+    }, 1000);
+  };
+  displayDate();
   class Book {
     constructor(title, author) {
       this.title = title;
@@ -50,7 +57,7 @@ window.onload = () => {
 
   const method = new Methods();
   const bookStorage = localStorage.getItem('bookArray');
-  const success = document.querySelector('.successMsg')
+  const success = document.querySelector('.successMsg');
 
   if (bookStorage) {
     method.bookList = JSON.parse(bookStorage);
@@ -79,7 +86,6 @@ const contactEl = document.querySelector('.contact');
 const bookSection = document.querySelector('#books');
 const formSection = document.querySelector('#form');
 const contactSection = document.querySelector('#contact');
-const dateDiv = document.querySelector('.date')
 
 listEl.addEventListener('click', () => {
   bookSection.classList.remove('hidden');
@@ -107,10 +113,3 @@ contactEl.addEventListener('click', () => {
   addNewEl.classList.remove('active');
   listEl.classList.remove('active');
 });
-
-const displayDate = () => {
-  setInterval(() => {
-    let date = new Date().toUTCString();
-    dateDiv.innerHTML = date;
-  }, 1000)
-}
