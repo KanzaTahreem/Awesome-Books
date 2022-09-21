@@ -11,7 +11,7 @@ window.onload = () => {
   class Methods {
     constructor() {
       this.bookList = [];
-      this.addBook = document.querySelector('.add-book');
+      this.addBook = document.querySelector('.all-books');
       this.parser = new DOMParser();
     }
 
@@ -68,3 +68,16 @@ window.onload = () => {
     localStorage.setItem('bookArray', JSON.stringify(method.bookList));
   });
 };
+
+const listEl = document.querySelector('.list');
+const addNewEl = document.querySelector('.add-new');
+const contactEl = document.querySelector('.contact');
+const bookSection = document.querySelector('#books');
+const formSection = document.querySelector('#form');
+const contactSection = document.querySelector('#contact');
+
+listEl.addEventListener('click', () => {
+  bookSection.classList.remove('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.add('hidden');
+});
