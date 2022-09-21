@@ -61,12 +61,6 @@ h2 {
   font-weight: 600;
 }
 
-.underline {
-  border: 1px solid black;
-  width: 20em;
-  display: flex;
-}
-
 .book-div {
   display: flex;
   justify-content: space-between;
@@ -81,6 +75,7 @@ h2 {
   margin-bottom: 4em;
   border: black solid 2px;
   border-radius: 10px;
+  overflow-y: auto;
 }
 
 .book-div:first-child {
