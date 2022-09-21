@@ -81,3 +81,15 @@ listEl.addEventListener('click', () => {
   formSection.classList.add('hidden');
   contactSection.classList.add('hidden');
 });
+
+addNewEl.addEventListener('click', () => {
+  bookSection.classList.add('hidden');
+  formSection.classList.remove('hidden');
+  contactSection.classList.add('hidden');
+});
+
+contactEl.addEventListener('click', () => {
+  bookSection.classList.add('hidden');
+  formSection.classList.add('hidden');
+  contactSection.classList.remove('hidden');
+});
