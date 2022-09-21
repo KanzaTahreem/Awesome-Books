@@ -7,17 +7,48 @@
     <title>Awesome Books App</title>
   </head>
   <body>
-    <section>
+    <header>
       <h1>Awesome Books App</h1>
-      <div class="add-book"></div>
-      <span class="underline"></span>
-      <div class="new-book">
-        <h2>Add a new book</h2>
+      <nav>
+        <a href="#book" class="list active">List</a>
+        <a href="#form" class="add-new">Add new</a>
+        <a href="#contact" class="contact">Contact</a>
+      </nav>
+    </header>
+    <div class="date"></div>
+
+    <section id="books">
+      <h2>Awesome Books List</h2>
+      <div class="all-books"></div>
+    </section>
+
+    <section class="hidden" id="form">
+      <form class="new-book">
+        <span class="successMsg transparent">Awesome Book Added!</span>
+        <h2>Add a new awesome book</h2>
         <input type="text" placeholder="Title" class="title" />
         <input type="text" placeholder="Author" class="author" />
         <button type="submit" class="add">Add</button>
-      </div>
+      </form>
     </section>
+
+    <section id="contact" class="hidden">
+      <h2>Contact Information</h2>
+      <p>
+        Do you have any questions or you just want to say "Hello"? <br />
+        You can reach out to us!
+      </p>
+      <ul>
+        <li>Our email: mail@mail.com</li>
+        <li>Our phone number: 0043586534422</li>
+        <li>Our address: Streetname 22. 84503 City, Country</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Copyright ...</p>
+    </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>

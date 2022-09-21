@@ -7,32 +7,62 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+body {
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0.5em 1em;
+  border: 2px solid black;
+}
+
+nav > a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5em 1em;
+}
+
+nav > a:nth-child(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  width: 100%;
+}
+
+#books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 70vw;
-  margin: 2em auto;
+  width: 100%;
+  height: calc(100vh - 11em);
+}
+
+#form,
+#contact {
+  margin-top: 2em;
+  height: calc(100vh - 13em);
 }
 
 h1 {
-  padding-bottom: 1em;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 h2 {
-  margin: 2em 0 1em 0;
+  font-size: 2em;
+  margin: 1em 0 1em 0;
   text-align: center;
   font-weight: 600;
-}
-
-.underline {
-  border: 1px solid black;
-  width: 20em;
-  display: flex;
 }
 
 .book-div {
@@ -43,12 +73,13 @@ h2 {
   background-color: #d3d3d338;
 }
 
-.add-book {
-  width: 100%;
-  padding: 0.5em;
+.all-books {
+  width: 70%;
+  padding: 1em 0.5em;
   margin-bottom: 4em;
   border: black solid 2px;
   border-radius: 10px;
+  overflow-y: auto;
 }
 
 .book-div:first-child {
@@ -87,4 +118,47 @@ input:focus {
 
 .remove {
   padding: 0.5em 2em;
+}
+
+#contact p,
+#contact ul {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.active {
+  text-decoration: underline;
+  color: chocolate;
+  font-weight: bold;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.successMsg {
+  color: chocolate;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.transparent {
+  opacity: 0;
 }
