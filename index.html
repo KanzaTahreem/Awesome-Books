@@ -10,25 +10,27 @@
     <header>
       <h1>Awesome Book</h1>
       <nav>
-        <a href="#">List</a>
-        <a href="#">Add new</a>
-        <a href="#">Contact</a>
+        <a href="#book" class="list">List</a>
+        <a href="#form" class="add-new">Add new</a>
+        <a href="#contact" class="contact">Contact</a>
       </nav>
     </header>
 
-    <section class="books">
+    <section id="books">
       <h2>Awesome Books App</h2>
-      <div class="add-book"></div>
+      <div class="all-books"></div>
     </section>
 
-    <form class="new-book">
-      <h2>Add a new book</h2>
-      <input type="text" placeholder="Title" class="title" />
-      <input type="text" placeholder="Author" class="author" />
-      <button type="submit" class="add">Add</button>
-    </form>
+    <section class="hidden" id="form">
+      <form class="new-book">
+        <h2>Add a new book</h2>
+        <input type="text" placeholder="Title" class="title" />
+        <input type="text" placeholder="Author" class="author" />
+        <button type="submit" class="add">Add</button>
+      </form>
+    </section>
 
-    <section id="contact">
+    <section id="contact" class="hidden">
       <h2>Contact Information</h2>
       <p>
         Do you have any questions or you just want to say "Hello"? <br />
@@ -40,6 +42,10 @@
         <li>Our address: Streetname 22. 84503 City, Country</li>
       </ul>
     </section>
+
+    <footer>
+      <p>Copyright ...</p>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
