@@ -1,34 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 section {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  width: 70vw;
+  margin: 2em auto;
 }
 
 h1 {
   padding-bottom: 1em;
   font-size: 2em;
+  font-weight: 600;
 }
 
-section > div {
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-  border-bottom: 1px solid grey;
+h2 {
+  margin: 2em 0 1em 0;
+  text-align: center;
+  font-weight: 600;
 }
 
-div p {
-  margin-bottom: 0.5em;
+.underline {
+  border: 1px solid black;
+  width: 20em;
+  display: flex;
+}
+
+.book-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6em;
+  align-items: center;
+  background-color: #d3d3d338;
+}
+
+.add-book {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 4em;
+  border: black solid 2px;
+  border-radius: 10px;
+}
+
+.book-div:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.book-div:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.book-div:nth-child(odd) {
+  background-color: rgb(211, 211, 211, 0.8);
+}
+
+.new-book {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 input {
-  margin: 0.5em 0;
-  align-self: flex-start;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+input:focus {
+  border-radius: 10px;
+}
+
+.add {
+  align-self: flex-end;
+  padding: 0.5em 3em;
+}
+
+.remove {
+  padding: 0.5em 2em;
 }
