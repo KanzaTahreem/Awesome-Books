@@ -1,5 +1,6 @@
 /* eslint-disable max-classes-per-file */
 window.onload = () => {
+  displayDate()
   const add = document.querySelector('.add');
 
   class Book {
@@ -75,6 +76,7 @@ const contactEl = document.querySelector('.contact');
 const bookSection = document.querySelector('#books');
 const formSection = document.querySelector('#form');
 const contactSection = document.querySelector('#contact');
+const dateDiv = document.querySelector('.date')
 
 listEl.addEventListener('click', () => {
   bookSection.classList.remove('hidden');
@@ -102,3 +104,10 @@ contactEl.addEventListener('click', () => {
   addNewEl.classList.remove('active');
   listEl.classList.remove('active');
 });
+
+const displayDate = () => {
+  setInterval(() => {
+    let date = new Date().toUTCString();
+    dateDiv.innerHTML = date;
+  }, 1000)
+}
