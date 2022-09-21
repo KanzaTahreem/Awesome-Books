@@ -31,22 +31,26 @@ nav > a:nth-child(2) {
   border-right: 1px solid black;
 }
 
-#books,
-#form,
-#contact {
-  height: calc(100vh - 9em);
-}
-
-#books {
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
-section {
+#books {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: calc(100vh - 11em);
+}
+
+#form,
+#contact {
+  margin-top: 2em;
+  height: calc(100vh - 13em);
 }
 
 h1 {
@@ -71,7 +75,7 @@ h2 {
 
 .all-books {
   width: 70%;
-  padding: 0.5em;
+  padding: 1em 0.5em;
   margin-bottom: 4em;
   border: black solid 2px;
   border-radius: 10px;
@@ -116,6 +120,12 @@ input:focus {
   padding: 0.5em 2em;
 }
 
+#contact p,
+#contact ul {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
 footer {
   display: flex;
   width: 100%;
@@ -137,9 +147,7 @@ footer {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  padding-right: 0.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding: 0.5em;
 }
 
 .successMsg {
