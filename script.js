@@ -50,6 +50,7 @@ window.onload = () => {
 
   const method = new Methods();
   const bookStorage = localStorage.getItem('bookArray');
+  const success = document.querySelector('.successMsg')
 
   if (bookStorage) {
     method.bookList = JSON.parse(bookStorage);
@@ -67,6 +68,8 @@ window.onload = () => {
     document.querySelector('.title').value = '';
     document.querySelector('.author').value = '';
     localStorage.setItem('bookArray', JSON.stringify(method.bookList));
+    success.classList.remove('transparent');
+    setTimeout(() => success.classList.add('transparent'), 3000);
   });
 };
 
