@@ -7,17 +7,40 @@
     <title>Awesome Books App</title>
   </head>
   <body>
-    <section>
-      <h1>Awesome Books App</h1>
+    <header>
+      <h1>Awesome Book</h1>
+      <nav>
+        <a href="#">List</a>
+        <a href="#">Add new</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="books">
+      <h2>Awesome Books App</h2>
       <div class="add-book"></div>
-      <span class="underline"></span>
-      <div class="new-book">
-        <h2>Add a new book</h2>
-        <input type="text" placeholder="Title" class="title" />
-        <input type="text" placeholder="Author" class="author" />
-        <button type="submit" class="add">Add</button>
-      </div>
     </section>
+
+    <form class="new-book">
+      <h2>Add a new book</h2>
+      <input type="text" placeholder="Title" class="title" />
+      <input type="text" placeholder="Author" class="author" />
+      <button type="submit" class="add">Add</button>
+    </form>
+
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <p>
+        Do you have any questions or you just want to say "Hello"? <br />
+        You can reach out to us!
+      </p>
+      <ul>
+        <li>Our email: mail@mail.com</li>
+        <li>Our phone number: 0043586534422</li>
+        <li>Our address: Streetname 22. 84503 City, Country</li>
+      </ul>
+    </section>
+
     <script src="./script.js"></script>
   </body>
 </html>
