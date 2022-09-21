@@ -7,23 +7,55 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+body {
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0.5em 1em;
+  border: 2px solid black;
+}
+
+nav > a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5em 1em;
+}
+
+nav > a:nth-child(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#books,
+#form,
+#contact {
+  height: calc(100vh - 9em);
+}
+
+#books {
+  width: 100%;
+}
+
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   justify-content: center;
-  width: 70vw;
-  margin: 2em auto;
+  width: 100%;
 }
 
 h1 {
-  padding-bottom: 1em;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 h2 {
+  font-size: 2em;
   margin: 2em 0 1em 0;
   text-align: center;
   font-weight: 600;
@@ -43,8 +75,8 @@ h2 {
   background-color: #d3d3d338;
 }
 
-.add-book {
-  width: 100%;
+.all-books {
+  width: 70%;
   padding: 0.5em;
   margin-bottom: 4em;
   border: black solid 2px;
@@ -87,4 +119,15 @@ input:focus {
 
 .remove {
   padding: 0.5em 2em;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.hidden {
+  display: none !important;
 }
