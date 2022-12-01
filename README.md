@@ -2,7 +2,7 @@
 
 # Awesome Books
 
-> The website that displays a list of books and allows you to add and remove books from that list.
+> _Awesome books_ is a website that displays a list of books and allows users to add and remove books from the list.
 
 ## Built With
 
